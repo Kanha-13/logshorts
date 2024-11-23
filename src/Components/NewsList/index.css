@@ -1,0 +1,14 @@
+#newslist-div {
+    width: 65%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    #newslist-div {
+        width: 100vw;
+    }
+}
