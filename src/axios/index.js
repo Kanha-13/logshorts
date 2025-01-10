@@ -4,6 +4,7 @@ const axiosInstance = axios.create({
   baseURL: 'https://newsapi.org/v2',
   headers: {
     'Content-Type': 'application/json', 
+    'User-Agent':'logShots/1.0 (https://logshorts.vercel.app/; kanha.agr11@gmail.com)'
   },
   timeout: 10000,
 });
