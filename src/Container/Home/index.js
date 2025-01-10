@@ -3,6 +3,7 @@ import Body from "../../Components/Body";
 import Header from "../../Components/Header";
 import newsController from "../../Components/controller/news";
 import Sidebar from "../../Components/Sidebar";
+import { DUMMY_NEWS } from "./const";
 
 const Home = () => {
     const [newsList, setNews] = useState([])
@@ -15,6 +16,7 @@ const Home = () => {
             setNews(response.articles.filter(art => art.title !== "[Removed]"))
         } catch (error) {
             alert("Something went wrong!")
+            setNews(DUMMY_NEWS.filter(art => art.title !== "[Removed]"))
         }
     }
 
@@ -26,6 +28,7 @@ const Home = () => {
             setNews(response.articles.filter(art => art.title !== "[Removed]"))
         } catch (error) {
             alert("Something went wrong!")
+            setNews(DUMMY_NEWS.filter(art => art.title !== "[Removed]"))
         }
     }
 
@@ -50,7 +53,7 @@ const Home = () => {
             width: "100vw", height: "100vh"
         }}>
             <Header onclick={handleSidebar} />
-        <Body news={newsList} />
+            <Body news={newsList} />
             {isSideBar && <Sidebar current={currentCat} onclick={fetchCat} />}
         </div>
     )
