@@ -1,5 +1,5 @@
 import './index.css'
-import Logo from '../../assets/images/lq-logo.png'
+import Logo from '../../assets/images/applogo.png'
 const Header = ({ onclick }) => {
     return (
         <div id="header-div">

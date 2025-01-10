@@ -50,7 +50,7 @@ const Home = () => {
             width: "100vw", height: "100vh"
         }}>
             <Header onclick={handleSidebar} />
-            <Body news={newsList} />
+        <Body news={newsList} />
             {isSideBar && <Sidebar current={currentCat} onclick={fetchCat} />}
         </div>
     )
